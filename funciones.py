@@ -11,6 +11,18 @@ def listar_titulos_y_anios(peliculas):
     for pelicula in peliculas:
         print(f"Título: {pelicula['titulo']}, Año: {pelicula['anio']}")
 
+# 2. Contar información (modificado)
+def contar_peliculas_por_genero(peliculas):
+    conteo_generos = defaultdict(int) 
+    for pelicula in peliculas:
+        for genero in pelicula['genero']:
+            conteo_generos[genero] += 1
+            
+    print("\nCantidad de películas por género:")
+    for genero, cantidad in conteo_generos.items():
+        print(f"{genero}: {cantidad}")
+
+
 
 
 
