@@ -22,7 +22,13 @@ def contar_peliculas_por_genero(peliculas):
     for genero, cantidad in conteo_generos.items():
         print(f"{genero}: {cantidad}")
 
-
+# 3. Buscar o filtrar información
+def buscar_peliculas_por_anio(peliculas):
+    anio = int(input("Introduce un año: "))
+    print(f"Películas lanzadas en {anio}:")
+    for pelicula in peliculas:
+        if pelicula['anio'] == anio:
+            print(f"- {pelicula['titulo']}")
 
 
 
