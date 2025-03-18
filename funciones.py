@@ -46,10 +46,14 @@ def buscar_peliculas_por_anio(peliculas):
 def buscar_peliculas_por_actor(peliculas):
     actor_busqueda = input("Introduce el nombre de un actor: ")
     print(f"Películas en las que ha participado {actor_busqueda}:")
+    print(f"{'Título':<40}") 
+    print("-" * 40)  
+
     for pelicula in peliculas:
         for actor in pelicula['actores']:
             if actor['nombre'].lower() == actor_busqueda.lower():
-                print(f"- {pelicula['titulo']}")
+                print(f"{pelicula['titulo']:<40}")  
+
 
 # 5. Película con calificación más alta
 def pelicula_con_calificacion_mas_alta(peliculas):
