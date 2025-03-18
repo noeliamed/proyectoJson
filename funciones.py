@@ -9,8 +9,11 @@ def cargar_peliculas():
 # 1. Listar información
 def listar_titulos_y_anios(peliculas):
     print("Títulos y años de lanzamiento:")
+    print(f"{'Título':<40} {'Año':<10}")  
+    print("-" * 50)  
+
     for pelicula in peliculas:
-        print(f"Título: {pelicula['titulo']}, Año: {pelicula['anio']}")
+        print(f"{pelicula['titulo']:<40} {pelicula['anio']:<10}")  
 
 
 # 2. Contar información (modificado)
