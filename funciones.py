@@ -72,6 +72,7 @@ def pelicula_con_calificacion_mas_alta(peliculas):
           f"con una calificación de {mejor_pelicula['calificacion']} y fue dirigida por "
           f"{mejor_pelicula['director']['nombre']}.")
 
+
 def salir_del_programa():
     print("Programa terminado")
     exit()
