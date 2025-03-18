@@ -43,6 +43,22 @@ def buscar_peliculas_por_actor(peliculas):
             if actor['nombre'].lower() == actor_busqueda.lower():
                 print(f"- {pelicula['titulo']}")
 
+# 5. Ejercicio libre
+def pelicula_con_calificacion_mas_alta(peliculas):
+    if not peliculas:  
+        print("No hay películas disponibles.")
+        return
+
+    # Filtra las películas que tienen la clave 'calificacion'
+    peliculas_con_calificacion = [p for p in peliculas if 'calificacion' in p]
+    if not peliculas_con_calificacion:  
+        print("No hay películas con calificación disponible.")
+        return
+
+    mejor_pelicula = max(peliculas_con_calificacion, key=lambda p: p['calificacion'])
+    print(f"La película con la calificación más alta es '{mejor_pelicula['titulo']}' "
+          f"con una calificación de {mejor_pelicula['calificacion']} y fue dirigida por "
+          f"{mejor_pelicula['director']['nombre']}.")
 
 def mostrar_menu():
     print("\n--- Menú de Opciones ---")
