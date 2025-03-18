@@ -34,9 +34,12 @@ def contar_peliculas_por_genero(peliculas):
 def buscar_peliculas_por_anio(peliculas):
     anio = int(input("Introduce un año: "))
     print(f"Películas lanzadas en {anio}:")
+    print(f"{'Título':<40}")  
+    print("-" * 40)  
+
     for pelicula in peliculas:
         if pelicula['anio'] == anio:
-            print(f"- {pelicula['titulo']}")
+            print(f"{pelicula['titulo']:<40}")  
 
 
 # 4. Buscar información relacionada
