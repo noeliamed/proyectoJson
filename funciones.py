@@ -24,8 +24,10 @@ def contar_peliculas_por_genero(peliculas):
             conteo_generos[genero] += 1
             
     print("\nCantidad de películas por género:")
+    print(f"{'Género':<30} {'Cantidad':<10}") 
+    print("-" * 40) 
     for genero, cantidad in conteo_generos.items():
-        print(f"{genero}: {cantidad}")
+         print(f"{genero:<30} {cantidad:<10}")  
 
 
 # 3. Buscar o filtrar información
