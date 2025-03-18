@@ -5,11 +5,13 @@ def cargar_peliculas():
     with open('peliculas.json', 'r') as file:
         return json.load(file)['peliculas']
 
+
 # 1. Listar información
 def listar_titulos_y_anios(peliculas):
     print("Títulos y años de lanzamiento:")
     for pelicula in peliculas:
         print(f"Título: {pelicula['titulo']}, Año: {pelicula['anio']}")
+
 
 # 2. Contar información (modificado)
 def contar_peliculas_por_genero(peliculas):
@@ -22,6 +24,7 @@ def contar_peliculas_por_genero(peliculas):
     for genero, cantidad in conteo_generos.items():
         print(f"{genero}: {cantidad}")
 
+
 # 3. Buscar o filtrar información
 def buscar_peliculas_por_anio(peliculas):
     anio = int(input("Introduce un año: "))
@@ -30,6 +33,15 @@ def buscar_peliculas_por_anio(peliculas):
         if pelicula['anio'] == anio:
             print(f"- {pelicula['titulo']}")
 
+
+# 4. Buscar información relacionada
+def buscar_peliculas_por_actor(peliculas):
+    actor_busqueda = input("Introduce el nombre de un actor: ")
+    print(f"Películas en las que ha participado {actor_busqueda}:")
+    for pelicula in peliculas:
+        for actor in pelicula['actores']:
+            if actor['nombre'].lower() == actor_busqueda.lower():
+                print(f"- {pelicula['titulo']}")
 
 
 def mostrar_menu():
