@@ -43,7 +43,7 @@ def buscar_peliculas_por_actor(peliculas):
             if actor['nombre'].lower() == actor_busqueda.lower():
                 print(f"- {pelicula['titulo']}")
 
-# 5. Ejercicio libre
+# 5. Película con calificación más alta
 def pelicula_con_calificacion_mas_alta(peliculas):
     if not peliculas:  
         print("No hay películas disponibles.")
